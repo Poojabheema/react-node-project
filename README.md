@@ -1,44 +1,77 @@
-# example-app-nodejs-backend-react-frontend
+# Simple React JS Project
 
-> This is an example app created for the blog post '[What is a good directory structure for a monorepo with a Node.js back end and React front end?](https://simonplend.com/what-is-a-good-directory-structure-for-a-monorepo-with-a-node-js-back-end-and-react-front-end/)'.
+## What is the use of this Repo
 
-## Requirements
+This Project is a Simple ReactJS Project which demonstrates the following
+1. Creating a Component in React
+2. Making HTTP calls
+3. Communicating between parent and child component
+4. Using Bootstrap along with React
+5. Using Basic Routing in React
 
-- Node.js >= v12
+The project Template can be used to build bigger projects
 
-## Application structure
+## Live Application URL
 
-- `client/` directory - React front end code.
-- `server/` directory - Node.js back end code.
-- `static/` directory - Compiled front end assets. Created by webpack when you run the
-command `npm run build`. The Node.js back end serves serves these assets using the
-[`express.static`](https://expressjs.com/en/starter/static-files.html#serving-static-files-in-express) middleware.
+### https://aditya-sridhar.github.io/simple-reactjs-app
+This URL has the application deployed in
 
-## Usage
+## Prerequisites
+
+### Install Node JS
+Refer to https://nodejs.org/en/ to install nodejs
+
+### Install create-react-app
+Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
 
 ```bash
-# Install dependencies for front end and back end
+npm install -g create-react-app
+```
+## Live Application URL
+
+The Application is deployed in https://aditya-sridhar.github.io/simple-reactjs-app
+
+Click on the link to see the application
+
+## Cloning and Running the Application in local
+
+Clone the project into local
+
+Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+
+```bash
 npm install
+```
 
-# Build front end assets with webpack
-npm run build
+In order to run the application Type the following command
 
-# Run Node.js back end server
+```bash
 npm start
 ```
 
-Load up http://localhost:3000 in your browser to view the example website.
+The Application Runs on **localhost:3000**
 
-## Libraries and frameworks used
+## Application design
 
-- [Express](https://expressjs.com/) - "Fast, unopinionated, minimalist web framework for Node.js".
+#### Components
 
-- [React](https://reactjs.org/) - "A JavaScript library for building user interfaces".
+1. **Customers** Component : This Component displays a list of customers. This Component gets the data from a json file in assets folder
 
-- [Webpack](https://www.npmjs.com/package/webpack) - A popular tool for building
-front end assets e.g. CSS and JavaScript.
+2. **CustomerDetails** Component : This Component Displays the details of the selected customer. This Component gets its data from a json file in assets folder as well. This Component is the Child Component of *Customers* Component
 
-- [Sucrase](https://www.npmjs.com/package/sucrase) - A simpler and faster
-alternative to [Babel](https://babeljs.io/) which brings support
-for JSX, TypeScript, ES modules, and more to your client side and server side
-JavaScript.
+#### HTTP client
+
+**axios** library is used to make HTTP Calls
+
+#### URL
+
+The application has just one url /customerlist which ties to *Customers* Component
+
+## Resources
+
+**create-react-app** : The following link has all the commands that can be used with create-react-app
+https://github.com/facebook/create-react-app
+
+**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
+
+**React Bootstrap** : Refer to https://react-bootstrap.github.io/getting-started/introduction/ to understand how to use React Bootstrap
